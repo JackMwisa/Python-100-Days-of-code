@@ -1,5 +1,0 @@
-
-
-
-first_name = "Sumaya"
-
