@@ -24,6 +24,6 @@
 # print(3 // 2)            # Floor division operator(//)
 
 
-names = "Jack Mwisa"
+# names = "Jack Mwisa"
 
-print(names)
+# print(names)
