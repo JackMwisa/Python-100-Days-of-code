@@ -4,3 +4,10 @@
 
 print("Hello World!\nHello World\nHello World")
 
+
+# Adding space 
+
+print("Hello" + "Jack")
+print("Hello " + "Jack")
+print("Hello" + " Jack")
+print("Hello" + "", "Jack")
