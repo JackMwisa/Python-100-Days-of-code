@@ -5,9 +5,13 @@
 print("Hello World!\nHello World\nHello World")
 
 
-# Adding space 
 
 print("Hello" + "Jack")
+
+# Adding space 2
+
 print("Hello " + "Jack")
 print("Hello" + " Jack")
-print("Hello" + "", "Jack")
+print("Hello", "Jack")
+print("Hello" + " " + "Jack")
+
