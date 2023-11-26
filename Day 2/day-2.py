@@ -31,3 +31,8 @@ print(923_575_454)
 print(123.9)
 print(1.5 * 2.08)
 
+
+
+# boolean
+print(True)
+print(False)
