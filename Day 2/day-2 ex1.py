@@ -19,7 +19,7 @@
 # print("1223" + "1223")
 
 
-# # Intergers
+# Intergers
 
 # print(123 + 123)
 
