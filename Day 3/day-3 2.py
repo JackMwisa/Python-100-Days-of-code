@@ -1,45 +1,42 @@
-def calculate_price(items, item_prices, combo_discount=0.1, gift_pack_discount=0.25):
-    """Calculates the total price for a customer's purchase, taking into account any discounts for combo packs or gift packs.
+def calculate_price(items, item_prices, combo_discounts=None, gift_pack_discount=0.25):
+    if not items:
+        return 0
 
-    Args:
-        items (list): A list of the items the customer is purchasing.
-        item_prices (dict): A dictionary of item names to prices.
-        combo_discount (float): The discount rate for combo packs (default: 0.1).
-        gift_pack_discount (float): The discount rate for gift packs (default: 0.25).
+    head, *tail = items
+    price = item_prices[head]
 
-    Returns:
-        float: The total price for the customer's purchase.
-    """
+    if not tail:
+        return price
 
-    total_price = 0
-    for item in items:
-        total_price += item_prices[item]
+    combo_pack_discount = combo_discounts.get(
+        f"Combo 1(Item 1 + 2)" if head == "Item 2" and tail[0] == "Item 1" else None
+    )
+    if combo_pack_discount is not None:
+        price *= (1 - combo_pack_discount)
 
-    # Check if the customer is purchasing a combo pack.
-    if len(items) == 2 and items != ["Item 1", "Item 3"]:
-        total_price *= (1 - combo_discount)
-
-    # Check if the customer is purchasing a gift pack.
-    if len(items) == 3:
-        total_price *= (1 - gift_pack_discount)
-
-    return total_price
+    return price + calculate_price(tail, item_prices, combo_discounts, gift_pack_discount)
 
 
+# Example usage
 item_prices = {
     "Item 1": 200.0,
     "Item 2": 150.0,
     "Item 3": 300.0,
     "Combo 1(Item 1 + 2)": 320.0,
-    "Gift Pack": 825.0
+    "Gift Pack": 825.0,
 }
 
-# Calculate the total price for a customer who purchases Item 1 and Item 2.
-items = ["Item 1", "Item 2"]
-total_price = calculate_price(items, item_prices)
-print(f"Total price for Item 1 and Item 2: {total_price}")
+combo_discounts = {
+    "Combo 1(Item 1 + 2)": 0.15,
+    "Combo 2(Item 1 + 3)": 0.20,
+}
 
-# Calculate the total price for a customer who purchases the gift pack of all three items.
-items = ["Item 1", "Item 2", "Item 3"]
-total_price = calculate_price(items, item_prices)
-print(f"Total price for the gift pack of all three items: {total_price}")
+# Calculate total price for Item 1 and Item 2 with default combo discount
+items = ["Item 1", "Item 2"]
+total_price = calculate_price(items, item_prices, combo_discounts)
+print(f"Total price for Item 1 and Item 2 with default combo discount: {total_price}")
+
+# Calculate total price for Item 1 and Item 2 with custom combo discount
+items = ["Item 1", "Item 2"]
+total_price = calculate_price(items, item_prices, combo_discounts={"Combo 1(Item 1 + 2)": 0.25})
+print(f"Total price for Item 1 and Item 2 with custom combo discount: {total_price}")
