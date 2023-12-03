@@ -1,7 +1,15 @@
 
 
-water_level = 90
-if water_level > 80:
-    print("Yes")
+# water_level = 90
+# if water_level > 80:
+#     print("Yes")
+# else:
+#     print("No")
+
+
+height = int(input("Enter your height: "))
+
+if height > 120:
+    print("Can ride")
 else:
-    print("No")
+    print("Can't ride")
