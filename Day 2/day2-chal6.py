@@ -5,5 +5,7 @@ num1 = two_numbers[0]
 num2 = two_numbers[1]
 
 
-print(type(num1))
-print(type(num2))
+num1 = int(num1)
+num2 = int(num2)
+
+print(num1 + num2)
