@@ -9,15 +9,11 @@ road = road.lower()
 
 
 if road == "left":
-        
-    lake= input("You have reached infront of a lake, choose swim or wait for a boat")
-    lake = lake.lower()
-
+    lake= input("You have reached in front of a lake, choose swim or wait for a boat").lower()
+    
     if lake == swim:
-        print("Yes")
-        
+        print("You won")
     else:
         print("You're dead")
-    
 else:
     print("You have failed") 
