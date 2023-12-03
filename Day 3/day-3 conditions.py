@@ -7,9 +7,9 @@
 #     print("No")
 
 
-height = int(input("Enter your height: "))
+height = int(input("Enter your height in cm: "))
 
-if height > 120:
+if height >= 120:
     print("Can ride")
 else:
     print("Can't ride")
