@@ -35,18 +35,31 @@ my_choice = my_options[choice]
 
 print(my_choice)
 
-computer_choice = my_options[random.randint(0,2)]
+random_cp = random.randint(0,2)
+
+computer_choice = my_options[random_cp]
  
 print(f"computer choice \n {computer_choice}")
 
 
-if 
+if choice == 0 and random_cp == 1:
+    print("You have failed")
+elif choice == 1 and random_cp == 2:
+    print("You have failed")
+elif choice == 2 and random_cp == 0:
+    print("You have failed")
+elif choice == random_cp:
+    print("No winner")
+else:
+    print("You have won")
+    
 
 
 
 
 
-
+# print(computer_choice)
+# print(choice)
 
 
 # print(rock, paper, scissors)
