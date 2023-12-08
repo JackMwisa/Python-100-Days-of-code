@@ -30,6 +30,7 @@ scissors = """
 my_options = [rock, paper, scissors]
 
 choice = int(input("What do you choose? Type 0 for Rock, 1 for Paper or 2 For Scissors.\n"))
+
 # choice list
 my_choice = my_options[choice]
 
@@ -48,8 +49,8 @@ computer_choice = my_options[random_cp]
 
 print(f"computer choice \n {computer_choice}")
 
-if choice > 2:
-    print("Wrong choice!")
+if choice > 2 or choice < 0:
+    print("Wrong choice! You lose")
 elif choice == 0 and random_cp == 1:
     print("You have failed")
 elif choice == 1 and random_cp == 2:
@@ -57,7 +58,7 @@ elif choice == 1 and random_cp == 2:
 elif choice == 2 and random_cp == 0:
     print("You have failed")
 elif choice == random_cp:
-    print("No winner")
+    print("It's a draw")
 else:
     print("You have won")
     
