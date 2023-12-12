@@ -8,7 +8,9 @@ for n in range(0, len(student_heights)):
 print(student_heights)
 
 
-# for x in student_heights:
-#     x += 
+summing = 0
+
+for summs in student_heights:
+    summing += student_heights
     
-#     print(x)
+print(summing)
