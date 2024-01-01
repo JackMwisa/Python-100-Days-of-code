@@ -11,8 +11,8 @@ def calculate_factorial(n):
 
 # Testing the Function
 # result1 = calculate_factorial(5)
-# result2 = calculate_factorial(0)
-# result3 = calculate_factorial(3)
+result2 = calculate_factorial(0)
+result3 = calculate_factorial(3)
 
 # Displaying Results and Explanation
 print("Test 1: calculate_factorial(5) =", result1)
