@@ -1,20 +1,31 @@
-def calculate_factorial(n):
-    result = 1
+def invert_dictionary(original_dict):
+    inverted_dict = {}
     
-    # Base case: factorial of 0 and 1 is 1
-    if n == 0 or n == 1:
-        return result
-    else:
-        # Recursive multiplication
-        result = n * calculate_factorial(n-1)
-        return result
+    # Iterate through each student in the original dictionary
+    for student, courses in original_dict.items():
+        # Iterate through each course for the student
+        for course in courses:
+            # Check if the course is already a key in the inverted dictionary
+            if course in inverted_dict:
+                # If the course is already a key, append the student to the existing list of values
+                inverted_dict[course].append(student)
+            else:
+                # If the course is not a key, create a new key with the student as the first value
+                inverted_dict[course] = [student]
+    
+    return inverted_dict
 
-# Testing the Function
-# result1 = calculate_factorial(5)
-result2 = calculate_factorial(0)
-result3 = calculate_factorial(3)
+# Sample input
+original_dict = {
+    'Stud1': ['CS1101', 'CS2402', 'CS2001'],
+    'Stud2': ['CS2402', 'CS2001', 'CS1102']
+}
 
-# Displaying Results and Explanation
-print("Test 1: calculate_factorial(5) =", result1)
-print("Test 2: calculate_factorial(0) =", result2)
-print("Test 3: calculate_factorial(3) =", result3)
+# Print the original dictionary
+print("Original Dictionary:")
+print(original_dict)
+
+# Generate and print the inverted dictionary
+inverted_dict = invert_dictionary(original_dict)
+print("\nInverted Dictionary:")
+print(inverted_dict)
