@@ -1,4 +1,3 @@
-
 def invert_dictionary(original_dict):
     inverted_dict = {}
     
