@@ -10,7 +10,7 @@ def calculate_factorial(n):
         return result
 
 # Testing the Function
-# result1 = calculate_factorial(5)
+result1 = calculate_factorial(5)
 result2 = calculate_factorial(0)
 result3 = calculate_factorial(3)
 
