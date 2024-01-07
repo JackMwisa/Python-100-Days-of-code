@@ -5,3 +5,20 @@
     "mango": "yellow",
     "grapes": ["black", "green"]
 }
+
+{
+    "apple": "red",
+    "banana": "yellow",
+    "cherry": "red",
+    "mango": "yellow",
+    "grapes": ["black", "green"]
+}
+
+
+{
+    "apple": "red",
+    "banana": "yellow",
+    "cherry": "red",
+    "mango": "yellow",
+    "grapes": ["black", "green"]
+}
