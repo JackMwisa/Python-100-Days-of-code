@@ -17,7 +17,7 @@ def invert_dictionary(original_dict):
 
 # Sample input
 original_dict = {
-    'Stud1': ['CS1101', 'CS2402', 'CS2001'],
+    'Stud1': ['CS1191', 'CS2402', 'CS2001'],
     'Stud2': ['CS2402', 'CS2001', 'CS1102']
 }
 
