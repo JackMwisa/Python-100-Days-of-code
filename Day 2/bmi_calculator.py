@@ -1,13 +1,13 @@
 
 
-height = input("Enter your height in m: ")
+# height = input("Enter your height in m: ")
 
-weight = input("Enter your weight in kg: ")
-
-
-# bmi = weight(kg) / height ** 2 (m2)
+# weight = input("Enter your weight in kg: ")
 
 
-bmi = int(weight) / float(height) ** 2
+# # bmi = weight(kg) / height ** 2 (m2)
 
-print(int(bmi))
+
+# bmi = int(weight) / float(height) ** 2
+
+# print(int(bmi))
