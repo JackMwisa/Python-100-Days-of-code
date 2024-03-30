@@ -2,7 +2,7 @@
 
 age = input("what is your current age? ")
 
-remaining_years = int(age) - 90
+remaining_years = 90 - int(age) 
 
 days  = int(remaining_years * 365.2421897) # days
 weeks = int(remaining_years * 52)
