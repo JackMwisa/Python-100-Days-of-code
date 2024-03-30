@@ -29,3 +29,5 @@ c = a+b
 print(a)
 print(b)
 print(c)
+
+print(3 * ((3 + 3) / 3) - 3)
