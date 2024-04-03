@@ -1,4 +1,4 @@
-
+# true x love
 
 print("Welcome to the love calculator: ")
 name1 = input("What is your name: \n")
