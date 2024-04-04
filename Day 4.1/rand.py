@@ -6,5 +6,5 @@ random_integer = random.randint(1,100)
 print(random_integer)
 print(my_module.pi)
 
-random_float = random.random() * 5
+random_float = random.random() * 10
 print(random_float)
