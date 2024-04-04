@@ -12,7 +12,9 @@ print(f"{row1}\n{row2}\n{row3}")
 position = input("where do you want to put the treasure? ")
 
 
-row = position[0]
-col = position[1]
+row = int(position[0]) - 1
+col = int(position[1]) - 1
 
 map[row][col] = "X"
+
+print(f"{row1}\n{row2}\n{row3}")
