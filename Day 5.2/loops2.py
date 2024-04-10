@@ -2,7 +2,6 @@
 # for i in fruits:
 #     print(i)
 #     print("Hello", i)
-    
 
 
 for x in range(2, 101, 2):
