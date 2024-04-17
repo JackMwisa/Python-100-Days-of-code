@@ -29,6 +29,7 @@ def main():
     else:
         liftoff_up(user_input)  # If input is zero, call liftoff_up for consistency
 
+
 if __name__ == "__main__":
     main()  # Call the main function when the script is executed
 
