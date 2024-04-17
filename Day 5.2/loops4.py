@@ -1,6 +1,6 @@
 # my loop
 
-# print("test")
+print("test")
 
 # Function for countdown with liftoff message when reaching 0 or less
 def liftoff_down(count):
