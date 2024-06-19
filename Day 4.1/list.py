@@ -9,3 +9,6 @@ fruits.extend(['lemon', 'tangerine'])
 
 print(fruits[random.randint(0,7)])
 print(fruits)
+
+
+
