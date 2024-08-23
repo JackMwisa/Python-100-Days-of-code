@@ -1,3 +1,22 @@
+"""
+
+QUESTION
+
+Create a program to implement a simple Tic-Tac-Toe game using a 2D array to represent the game board.
+
+Our Requirements:
+
+1. Game board: Create a 3x3 2D array to represent the game board.
+2. Players: Implement two players (X and O).
+3· Turn-based gameplay: Players take turns making moves.
+4· Winning conditions: Check for winning combinations (rows, columns, diagonals).
+5· Draw condition: If the board is full and no player has won, it's a draw.
+
+
+"""
+
+#MY LANGUAGE OF CHOICE IS GOING TO BE PYTHON BECAUSE IS IT WILL BE EASIER 
+
 class TicTacToe:
     def __init__(self):
         self.board = [['-' for _ in range(3)] for _ in range(3)]
