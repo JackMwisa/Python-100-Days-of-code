@@ -66,7 +66,7 @@ class TicTacToe {
     }
 
     playGame() {
-        console.log("Welcome to Tic-Tac-Toe!\n----------------------");
+        console.log("\n----------------------");
         const readline = require('readline');
         const rl = readline.createInterface({
             input: process.stdin,
