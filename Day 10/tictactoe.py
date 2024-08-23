@@ -66,7 +66,7 @@ class TicTacToe:
         self.current_player = 'O' if self.current_player == 'X' else 'X'
 
     def play_game(self):
-        print("Welcome to Tic-Tac-Toe!\n----------------------")
+        print("Welcome to Tic-Tac-Toe!\n----------------------\n")
         while not self.is_board_full() and not self.check_winner():
             self.print_board()
             move = input(f"Player {self.current_player}, enter your move (row and column, separated by a space): ").strip()
