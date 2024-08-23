@@ -67,6 +67,8 @@ class TicTacToe {
 
     playGame() {
         console.log("\n----------------------");
+        console.log("Welcome to Tic-Tac-Toe!");
+        console.log("----------------------");
         const readline = require('readline');
         const rl = readline.createInterface({
             input: process.stdin,
@@ -75,7 +77,7 @@ class TicTacToe {
 
         const askMove = () => {
             this.printBoard();
-            rl.question(`Player ${this.currentPlayer}, enter your move (row and column): `, answer => {
+            rl.question(`Player ${this.currentPlayer}, enter your move (row and column, separated by a space): `, answer => {
                 const move = answer.trim().split(' ');
                 if (move.length === 2 && move.every(v => !isNaN(v))) {
                     const [row, col] = move.map(Number);
