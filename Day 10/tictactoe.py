@@ -47,17 +47,22 @@ class TicTacToe:
         self.current_player = 'O' if self.current_player == 'X' else 'X'
 
     def play_game(self):
+        print("Welcome to Tic-Tac-Toe!\n----------------------")
         while not self.is_board_full() and not self.check_winner():
             self.print_board()
-            row, col = map(int, input(f"Player {self.current_player}, enter your move (row and column): ").split())
-            if self.make_move(row, col):
-                if self.check_winner():
-                    self.print_board()
-                    print(f"Player {self.current_player} wins!")
-                    return
-                self.switch_player()
+            move = input(f"Player {self.current_player}, enter your move (row and column, separated by a space): ").strip()
+            if len(move.split()) == 2 and move.replace(' ', '').isdigit():
+                row, col = map(int, move.split())
+                if self.make_move(row, col):
+                    if self.check_winner():
+                        self.print_board()
+                        print(f"Player {self.current_player} wins!")
+                        return
+                    self.switch_player()
+                else:
+                    print("This move is not valid")
             else:
-                print("This move is not valid")
+                print("Invalid input. Please enter row and column separated by a space.")
         
         self.print_board()
         if self.is_board_full() and not self.check_winner():
